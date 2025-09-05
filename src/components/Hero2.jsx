@@ -1,5 +1,3 @@
-// Hero2.jsx
-
 import React from "react";
 import Slider from "react-slick";
 import { FaLaptopCode, FaTools, FaPencilRuler, FaFileAlt } from "react-icons/fa";
@@ -38,7 +36,7 @@ const Hero2 = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768, // mobile
+        breakpoint: 768, // tablet & below
         settings: {
           slidesToShow: 1,
         },
@@ -47,19 +45,19 @@ const Hero2 = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-4 md:px-12 lg:px-24">
+    <section className="bg-gray-50 py-16 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">What We Do</h2>
-        <p className="text-gray-600 text-lg">Explore our core services</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">What We Do</h2>
+        <p className="text-gray-600 text-base sm:text-lg">Explore our core services</p>
       </div>
 
       <Slider {...settings}>
         {services.map((service, index) => (
-          <div key={index} className="px-4">
-            <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition">
+          <div key={index} className="px-2 sm:px-4">
+            <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 text-center hover:shadow-xl transition duration-300 h-full">
               {service.icon}
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.desc}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-sm sm:text-base">{service.desc}</p>
             </div>
           </div>
         ))}
